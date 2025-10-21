@@ -1,9 +1,10 @@
+# Applying and ploting Linear Regression model
 # Import PyTorch
 import matplotlib.pyplot as plt
 import matplotlib
 import torch
 # importing matplot
-matplotlib.use('TkAgg')
+# matplotlib.use('TkAgg')
 print(f"Current backend: {matplotlib.get_backend()}")
 # Creating Known parameter
 weight = 0.7
@@ -41,22 +42,25 @@ def plot_prediction(train_data=X_train,
     # Plots training data, test data and compares predictions.
     plt.figure(figsize=(10, 7))
     # Plotting Training data in Blue Color
-    plt.scatter(train_data, train_labels, c="#0000FF",
-                s=4, label="Training data")
+    plt.scatter(train_data, train_labels, color="#0000FF", label="Train")
+    plt.xlabel("X-axis")
+    plt.ylabel("Y-axis")
+    plt.title("Linear Slope")
     # Plot test data in green
-    plt.scatter(test_data, test_labels, c='#FF0000', s=4, label="Testing data")
-    # plt.savefig("Slope.png")
-    plt.show()
+    plt.scatter(test_data, test_labels, color='#FF0000', label="Test")
     # print("Testing and Training figure been saved")
     # Are there prediction
     if predictions is not None:
         # plot the predictions if there exist
-        plt.scatter(test_data, predictions, c='#00ff00',
-                    s=4, label="predictions")
-        plt.savefig("Prediction.png")
+        plt.scatter(test_data, predictions,
+                    color='#00ff00', label="Prediction")
+        # plt.savefig("Prediction.png")
         print("Prediction figure been saved")
     # Show the legend
     plt.legend(prop={"size": 14})
+    plt.title("Plot with Legend")
+    plt.show()
+    # plt.savefig("figure.png") could be used to store the output figure physical form
 
 
 plot_prediction()
