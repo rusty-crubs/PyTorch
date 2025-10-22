@@ -1,9 +1,12 @@
+# Learn More from YouTube: https://www.youtube.com/watch?v=V_xro1bcAuA
+# https://www.learnpytorch.io/00_pytorch_fundamentals/#exercises
 # Applying and ploting Linear Regression model
 # Import PyTorch
+import torch
+import torch.nn as nn
+# importing matplot
 import matplotlib.pyplot as plt
 import matplotlib
-import torch
-# importing matplot
 # matplotlib.use('TkAgg')
 print(f"Current backend: {matplotlib.get_backend()}")
 # Creating Known parameter
@@ -65,3 +68,4 @@ def plot_prediction(train_data=X_train,
 
 plot_prediction()
 print("Successfully Complete")
+
